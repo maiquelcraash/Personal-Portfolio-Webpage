@@ -1,0 +1,98 @@
+body {
+    background: #DDD;
+}
+
+#nav-bar {
+    position: absolute;
+    top: 25%;
+    right: 30px;
+}
+
+.clearfix::before,
+.clearfix::after {
+    /* Este uso específico do valor table para a propriedade display serve para ajustar bugs de margem entre o container e 
+    os elementos com float, e o uso de clear: both no ::after produz o mesmo resultado de se colocar um elemento vazio após o conteúdo. 
+    Eventualmente, alguns desenvolvedores acabam utilizando algum outro nome para a classe clearfix, como cf, reduzindo o nome para
+    se escrever menos, ou group, para expressar melhor o contexto de uso. Independente do nome, sempre a tenha nos seus projetos para 
+    tratar esse problema clássico de uso da propriedade float.*/
+    content: "";
+    display: table;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0px;
+}
+
+.header-content {
+    background-color: rgba(245,244,244,0.85);
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #575757;
+    box-shadow: 1px 1px 8px #575757;
+}
+
+.header-content .logo {
+    position: relative;
+    width: 50%;
+    top: 25%;
+    left: 30px;
+    text-align: left;
+    font-family: Nunito, monospace;
+    font-size: 24pt;
+    color: #337ab7;
+}
+
+.group {
+    padding: 40px 40px 80px 40px;
+}
+
+.content {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 80px;
+}
+
+.content h1 {
+    color: #337ab7;
+}
+
+.about {
+    background: white;
+    padding: 80px;
+}
+
+.about img {
+    border: 3px solid #DDD;
+    width: 300px;
+    webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%) !important;
+}
+
+.portfolio, .credits {
+    background: #337ab7;
+    color: white;
+}
+
+.portfolio img {
+    margin-top: 40px;
+
+}
+
+.contact {
+    background: #FFF;
+}
+
+.contact span{
+    font-size: 28pt;
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
